@@ -3,5 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
 	$('#country-state-city').change ->
+		input_country = $(this);
 		country = $('#country-state-city :selected').val()
-		alert country
+		$.getJSON('/states/'+country,(data, resp) -> 
+      		console.log(data)
+    	)
