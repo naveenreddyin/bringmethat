@@ -4,6 +4,7 @@
 		%title
 			= "Bringmethat"
 		= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true
+		= stylesheet_link_tag	'application', 'https://fonts.googleapis.com/css?family=Alegreya:400,900italic'
 		= javascript_include_tag 'application', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
@@ -15,20 +16,15 @@
 					.masthead.clearfix
 						.inner
 							%h3.masthead-brand
-								= "Cover"
+								= "Bring Me That"
 							%nav
 								%ul.nav.masthead-nav
 									%li.active 
 										%a{:href => "#"}Home
 
-				.inner.cover
-
-					%h1.cover-heading
-						= "Cover your page."
-					%p.lead
-						= "Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own."
-					%p.lead
-						%a{:href => "#", :class => 'btn btn-lg btn-default'}Learn more
+				.inner.cover.main-center-cover
+					= render "shared/home_page_cover_form"
+					
 					= yield
 
 
