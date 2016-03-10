@@ -1,0 +1,10 @@
+-	if params[:controller] == 'home'
+	
+
+	%h1.cover-heading
+		= "Bring from?"
+	%form
+		%select{:name => 'country_state_city', :id => "country-state-city"}
+			-	CS.countries().each do |key,value|
+				%option{:value => key}=value
+		
