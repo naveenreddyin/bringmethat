@@ -4,7 +4,41 @@
 jQuery ->
 	$('#country-state-city').change ->
 		input_country = $(this);
-		country = $('#country-state-city :selected').val()
+		input_state = $('#state-city')
+		country = $('#country-state-city :selected').val();
+		city = $('#city')
+		do input_state.empty
+		do city.hide
+		do input_state.hide
 		$.getJSON('/states/'+country,(data, resp) -> 
-      		console.log(data)
+      		# console.log data
+      		if Object.keys(data).length > 0
+      			opt = "<option value='select' selected>Select State</option>"
+      			for key,value of data
+      				# console.log "#{key} and #{value}"
+      				opt += "<option value=#{key}>#{value}</option>"
+      				input_state.append opt
+      			# console.log input_state
+      			do input_state.show
+      		else
+      			do input_state.hide
+      			do city.hide
     	)
+	
+	$('#state-city').change ->
+		country = $('#country-state-city :selected').val();
+		state_ref = $(this);
+		state = state_ref.val()
+		city = $('#city')
+		do city.empty
+		$.getJSON('/cities/'+state+'/'+country,(data,resp) ->
+			# console.log data
+			if Object.keys(data).length > 0
+				opt = "<option value='select' selected>Select City</option>"
+				for key, value of data
+					opt += "<option value=#{key}>#{value}</option>"
+					city.append opt
+				do city.show
+			else
+				do city.hide
+		)

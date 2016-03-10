@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  get 'states/:country', to: 'country#states' 
+  get 'states/:country', to: 'country#states'
+
+  get 'cities/:state/:country', to: 'country#cities'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

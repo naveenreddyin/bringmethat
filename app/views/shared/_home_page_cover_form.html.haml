@@ -1,10 +1,18 @@
--	if params[:controller] == 'home'
-	
+#select-box-div
+	-	if params[:controller] == 'home'
+		
 
-	%h1.cover-heading
-		= "Bring from?"
-	%form
-		%select{:name => 'country_state_city', :id => "country-state-city"}
-			-	CS.countries().each do |key,value|
-				%option{:value => key}=value
+		%h1.cover-heading
+			= "Bring from?"
+		%form
+			%select{:name => 'country_state_city', :id => "country-state-city", :class => 'country-state-city-select'}
+				%option{:value => 'select', :selected => 'selected'}='Select Country'
+				-	CS.countries().each do |key,value|
+					%option{:value => key}=value
+
+			%select{:id => "state-city",:name => "state_city", :class => 'state-city-select'}
+				%option{:value => 'select', :selected => 'selected'}='Select State'
+
+			%select{:id => "city", :name => "city", :class => "city-select"}
+				%option{:value => 'select', :selected => 'selected'}='Select City'
 		

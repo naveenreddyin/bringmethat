@@ -1,0 +1,26 @@
+// Place all the styles related to the country controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.state-city-select,.country-state-city-select,.city-select{
+	float:left;
+	position: relative;
+}
+
+.state-city-select{
+	display: none;
+	margin-top: 10%;
+}
+
+#select-box-div{
+	width:200px;
+	position: fixed;
+	left: 40%;
+	top: 10%;
+}
+
+.city-select{
+	display: none;
+	margin-top: 10%;
+}
+
