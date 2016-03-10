@@ -31,6 +31,10 @@ gem 'devise'
 gem "pundit"
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9.0'
+
+ 	
+gem 'city-state'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
