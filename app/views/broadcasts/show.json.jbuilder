@@ -1,0 +1,1 @@
+json.extract! @broadcast, :id, :title, :description, :country_travelling_to, :city_travelling_to, :amount, :currency_id, :weight, :travel_date, :reaching_date, :reaching_time, :created_at, :updated_at

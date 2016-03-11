@@ -9,6 +9,7 @@ jQuery ->
 		city = $('#city')
 		do input_state.empty
 		do city.hide
+		do $('.frontpage-submit').hide
 		do input_state.hide
 		$.getJSON('/states/'+country,(data, resp) -> 
       		# console.log data
@@ -39,6 +40,7 @@ jQuery ->
 					opt += "<option value=#{key}>#{value}</option>"
 					city.append opt
 				do city.show
+				do $('.frontpage-submit').show
 			else
 				do city.hide
 		)

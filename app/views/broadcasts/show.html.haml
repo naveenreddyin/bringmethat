@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @broadcast.title
+%p
+  %b Description:
+  = @broadcast.description
+%p
+  %b Country travelling to:
+  = @broadcast.country_travelling_to
+%p
+  %b City travelling to:
+  = @broadcast.city_travelling_to
+%p
+  %b Amount:
+  = @broadcast.amount
+%p
+  %b Currency:
+  = @broadcast.currency
+%p
+  %b Weight:
+  = @broadcast.weight
+%p
+  %b Travel date:
+  = @broadcast.travel_date
+%p
+  %b Reaching date:
+  = @broadcast.reaching_date
+%p
+  %b Reaching time:
+  = @broadcast.reaching_time
+
+= link_to 'Edit', edit_broadcast_path(@broadcast)
+\|
+= link_to 'Back', broadcasts_path
