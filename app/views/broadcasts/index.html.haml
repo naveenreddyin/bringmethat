@@ -1,0 +1,39 @@
+%h1 Listing broadcasts
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th Country travelling to
+      %th City travelling to
+      %th Amount
+      %th Currency
+      %th Weight
+      %th Travel date
+      %th Reaching date
+      %th Reaching time
+      %th
+      %th
+      %th
+
+  %tbody
+    - @broadcasts.each do |broadcast|
+      %tr
+        %td= broadcast.title
+        %td= broadcast.description
+        %td= broadcast.country_travelling_to
+        %td= broadcast.city_travelling_to
+        %td= broadcast.amount
+        %td= broadcast.currency
+        %td= broadcast.weight
+        %td= broadcast.travel_date
+        %td= broadcast.reaching_date
+        %td= broadcast.reaching_time
+        %td= link_to 'Show', broadcast
+        %td= link_to 'Edit', edit_broadcast_path(broadcast)
+        %td= link_to 'Destroy', broadcast, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Broadcast', new_broadcast_path

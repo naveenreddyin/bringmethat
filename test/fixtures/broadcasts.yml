@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  country_travelling_to: MyString
+  city_travelling_to: MyString
+  amount: 1.5
+  currency_id: 
+  weight: 1
+  travel_date: 2016-03-10
+  reaching_date: 2016-03-10
+  reaching_time: 2016-03-10 19:57:25
+
+two:
+  title: MyString
+  description: MyText
+  country_travelling_to: MyString
+  city_travelling_to: MyString
+  amount: 1.5
+  currency_id: 
+  weight: 1
+  travel_date: 2016-03-10
+  reaching_date: 2016-03-10
+  reaching_time: 2016-03-10 19:57:25
