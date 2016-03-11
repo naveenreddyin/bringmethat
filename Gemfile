@@ -35,6 +35,13 @@ gem 'haml-rails', '~> 0.9.0'
  	
 gem 'city-state'
 gem 'mysql'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'friendly_id', '~> 5.1'
+gem 'paperclip', '~> 4.3', '>= 4.3.5'
+gem 'kaminari', '~> 0.16.3'
+gem 'sidekiq', '~> 4.1', '>= 4.1.1'
+gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+gem 'letter_opener_web', '~> 1.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
