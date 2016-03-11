@@ -14,12 +14,14 @@ jQuery ->
 		$.getJSON('/states/'+country,(data, resp) -> 
       		# console.log data
       		if Object.keys(data).length > 0
-      			opt = "<option value='select' selected>Select State</option>"
+      			first_opt = "<option value='select' selected>Select State</option>"
+      			input_state.append first_opt
       			for key,value of data
       				# console.log "#{key} and #{value}"
-      				opt += "<option value=#{key}>#{value}</option>"
+      				opt = "<option value=#{key}>#{value}</option>"
       				input_state.append opt
       			# console.log input_state
+
       			do input_state.show
       		else
       			do input_state.hide
@@ -35,9 +37,10 @@ jQuery ->
 		$.getJSON('/cities/'+state+'/'+country,(data,resp) ->
 			# console.log data
 			if Object.keys(data).length > 0
-				opt = "<option value='select' selected>Select City</option>"
+				first_opt = "<option value='select' selected>Select City</option>"
+				city.append first_opt
 				for key, value of data
-					opt += "<option value=#{key}>#{value}</option>"
+					opt = "<option value=#{key}>#{value}</option>"
 					city.append opt
 				do city.show
 				do $('.frontpage-submit').show
