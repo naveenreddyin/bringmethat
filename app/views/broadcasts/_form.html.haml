@@ -6,35 +6,35 @@
         - @broadcast.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
+  .field-group
     = f.label :title
-    = f.text_field :title
-  .field
+    = f.text_field :title, :class => "form-control"
+  .field-group
     = f.label :description
-    = f.text_area :description
-  .field
+    = f.text_area :description, :class => "form-control"
+  .field-group
     = f.label :country_travelling_to
-    = f.text_field :country_travelling_to
-  .field
+    = f.text_field :country_travelling_to, :class => "form-control"
+  .field-group
     = f.label :city_travelling_to
-    = f.text_field :city_travelling_to
-  .field
+    = f.text_field :city_travelling_to, :class => "form-control"
+  .field-group
     = f.label :amount
-    = f.text_field :amount
-  .field
+    = f.text_field :amount, :class => "form-control"
+  .field-group
     = f.label :currency
-    = f.select :currency_id, options_for_select(Currency.all.map{|c|[c.currency_code, c.id]})
-  .field
+    = f.select :currency_id, options_for_select(Currency.all.map{|c|[c.currency_code, c.id]}), :class => "form-control"
+  .field-group
     = f.label :weight
-    = f.number_field :weight
-  .field
+    = f.number_field :weight, :class => "form-control"
+  .field-group
     = f.label :travel_date
-    = f.date_select :travel_date
-  .field
+    = f.date_select :travel_date, :class => "form-control"
+  .field-group
     = f.label :reaching_date
-    = f.date_select :reaching_date
-  .field
+    = f.date_select :reaching_date, :class => "form-control"
+  .field-group
     = f.label :reaching_time
-    = f.time_select :reaching_time
+    = f.time_select :reaching_time, :class => "form-control"
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', :class => "btn btn-primary"
