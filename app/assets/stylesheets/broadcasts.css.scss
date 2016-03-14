@@ -11,3 +11,21 @@ body{
 .navbar-default{
 	background-color: #000;
 }
+
+.broadcast-navbar{
+	background-color: #34DDDD;
+	ul {
+		li{
+			a{
+				color: #fff !important;
+				font-family: 'Arial', serif;
+				font-weight: bolder;
+				font-size: 2em;
+				&:hover{
+				color: #ccc !important;
+
+				}
+			}
+		}
+	}
+}
