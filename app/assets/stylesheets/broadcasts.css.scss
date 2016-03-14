@@ -13,7 +13,7 @@ body{
 }
 
 .broadcast-navbar{
-	background-color: #34DDDD;
+	background-color: #00E5EE;
 	ul {
 		li{
 			a{
@@ -22,10 +22,16 @@ body{
 				font-weight: bolder;
 				font-size: 2em;
 				&:hover{
-				color: #ccc !important;
+				color: #F5F5F5 !important;
 
 				}
 			}
+
+			&:hover{
+				background-color: #00ced6 !important;
+			}
+
+
 		}
 	}
 }
