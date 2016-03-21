@@ -63,8 +63,8 @@ body {
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
+  height: 10%; /* For at least Firefox */
+  min-height: 5%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
@@ -89,6 +89,29 @@ body {
 
 .masthead{
   border-bottom: 5px #FA0300 solid;
+}
+
+.cover-heading{
+  float: left;
+  clear: both;
+}
+
+.frontpage-first-column{
+    position: relative;
+    left: 25%;
+    top: 100px;
+}
+
+.frontpage-second-column{
+
+  position: relative;
+  left: 15%;
+  top: 125px;
+}
+
+.frontpage-form{
+  float: left;
+  clear: both;
 }
 
 /*

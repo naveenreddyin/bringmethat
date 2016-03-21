@@ -1,5 +1,5 @@
 = render "shared/head"
-		
+
 .site-wrapper
 	.site-wrapper-inner
 		.cover-container
@@ -10,8 +10,15 @@
 						= "Bring Me That"
 					%nav
 						%ul.nav.masthead-nav
-							%li.active 
+							%li.active
 								%a{:href => "#"}Home
 
-						
-		= yield
+.container-fluid
+	.row-fluid
+		.span5.frontpage-first-column
+			= yield
+		.span10.frontpage-second-column
+			%p
+				%h1	Want to be a flyer?
+			.btn.btn-primary
+				= "Click here"
