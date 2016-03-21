@@ -32,7 +32,7 @@ gem "pundit"
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9.0'
 
- 	
+
 gem 'city-state'
 gem 'mysql'
 gem 'pg'
@@ -43,6 +43,8 @@ gem 'kaminari', '~> 0.16.3'
 gem 'sidekiq', '~> 4.1', '>= 4.1.1'
 gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 gem 'letter_opener_web', '~> 1.3'
+
+gem 'rails_best_practices', '~> 1.16'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -65,4 +67,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

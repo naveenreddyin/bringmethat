@@ -2,7 +2,7 @@ class BroadcastsController < ApplicationController
   before_action :set_broadcast, only: [:show, :edit, :update, :destroy]
   layout 'broadcasts'
 
-  # GET /broadcasts
+  # =>  GET /broadcasts
   # GET /broadcasts.json
   def index
     @broadcasts = Broadcast.all
