@@ -46,6 +46,8 @@ gem 'letter_opener_web', '~> 1.3'
 
 gem 'rails_best_practices', '~> 1.16'
 
+gem 'seed_dump'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
