@@ -1,3 +1,5 @@
 class Role < ActiveRecord::Base
-  belongs_to :user
+	has_many :users
+	has_many :flyers
+	has_many :admins
 end

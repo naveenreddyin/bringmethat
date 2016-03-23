@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :flyers
+  devise_for :admins
   resources :currencies
   resources :broadcasts
   devise_for :users
