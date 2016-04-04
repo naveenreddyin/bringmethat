@@ -34,6 +34,7 @@ gem 'haml-rails', '~> 0.9.0'
 
 
 gem 'city-state'
+
 gem 'mysql'
 gem 'pg'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
