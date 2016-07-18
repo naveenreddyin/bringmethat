@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :currencies
   resources :broadcasts
-  devise_for :users
+
+  devise_for :users, controllers: {
+        sessions: 'users/sessions'
+      }
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -14,6 +18,8 @@ Rails.application.routes.draw do
   get 'states/:country', to: 'country#states'
 
   get 'cities/:state/:country', to: 'country#cities'
+
+  get '/static' => 'home#static'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
