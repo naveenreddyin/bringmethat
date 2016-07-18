@@ -2,10 +2,9 @@ class HomeController < ApplicationController
 	include Pundit
 	protect_from_forgery with: :exception
 
-	before_action :authenticate_user!
+	before_action :authenticate_user!, only: :static
 	after_action :verify_authorized, only: :static
 	rescue_from NotAuthorizedError, with: :user_not_authorized
-		skip_before_action :authenticate_user!, only: [:static]
 
   def index
   end
