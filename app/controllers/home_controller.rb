@@ -3,10 +3,11 @@ class HomeController < ApplicationController
 	protect_from_forgery with: :exception
 
 	before_action :authenticate_user!, only: :static
-	after_action :verify_authorized, only: :static
+	after_action :verify_authorized, only: [:index, :static]
 	rescue_from NotAuthorizedError, with: :user_not_authorized
 
   def index
+  	authorize :home, :index?
   end
 
   def static
