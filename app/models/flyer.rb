@@ -5,4 +5,13 @@ class Flyer < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :role
+
+  after_initialize :set_default_role, :if => :new_record?
+
+  def set_default_role
+  	@roles = Role.all
+
+    self.role_id ||= @roles.find_by(name:'flyer').id
+  end
+
 end

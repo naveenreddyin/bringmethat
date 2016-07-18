@@ -28,7 +28,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
 gem 'devise'
-gem "pundit"
+gem "pundit", github: 'elabs/pundit'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'haml-rails', '~> 0.9.0'
 
@@ -36,7 +36,7 @@ gem 'haml-rails', '~> 0.9.0'
 gem 'city-state'
 
 gem 'mysql'
-gem 'pg'
+# gem 'pg'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'friendly_id', '~> 5.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
