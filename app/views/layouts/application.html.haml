@@ -13,8 +13,8 @@
 							%li.active
 								%a{:href => "#"}Home
 								%a{:href => "/"}Login
-								- if user_signed_in?
-									= current_user.role_id
+								- if flyer && flyer_signed_in?
+									= current_flyer.role_id
 
 .container-fluid
 	.row-fluid
@@ -24,4 +24,4 @@
 			%p
 				%h1	Want to be a flyer?
 			.btn.btn-primary
-				= "Click here"
+				= link_to "Click Here", new_flyer_session_path
