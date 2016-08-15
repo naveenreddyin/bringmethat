@@ -13,7 +13,7 @@
 							%li.active
 								%a{:href => "#"}Home
 								%a{:href => "/"}Login
-								- if flyer && flyer_signed_in?
+								- if flyer_signed_in?
 									= current_flyer.role_id
 
 .container-fluid
