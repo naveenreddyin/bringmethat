@@ -17,3 +17,25 @@
 
 @import "main";
 @import "country";
+
+
+.navbar-inverse{
+	background-color: #8FD8D2;
+	border-color: #fff;
+
+}
+
+body{
+	background-color: #efefef;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #fff;
+    color: #ff383f;
+}
+
+a{
+	color: #76323F;
+}
+
+

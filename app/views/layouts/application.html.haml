@@ -1,20 +1,41 @@
 = render "shared/head"
 
-.site-wrapper
-	.site-wrapper-inner
-		.cover-container
-			= render "shared/notice_and_alert"
-			.masthead.clearfix
-				.inner
-					%h3.masthead-brand
-						= "Bring Me That"
-					%nav
-						%ul.nav.masthead-nav
-							%li.active
-								%a{:href => "#"}Home
-								%a{:href => "/"}Login
-								- if flyer_signed_in?
-									= current_flyer.role_id
+%nav.navbar.navbar-inverse.navbar-fixed-top
+	.container
+		.navbar-header
+			%button.navbar-toggle.collapsed{"data-toggle" => "collapse", "data-target"=>"#navbar", "aria-expanded"=>"false", "aria-controls"=>"navbar"}
+				%span{:class=>"sr-only"}Toggle navigation
+				%span.icon-bar
+				%span.icon-bar
+				%span.icon-bar
+			
+			%a.navbar-brand{:href => "#"}Bring Me That
+		%div{:class => "collapse navbar-collapse", :id => "navbar"}
+			%ul.nav.navbar-nav
+				%li.active
+					%a{:href => "#"}Home
+				%li
+					%a{:href => "#"}One Home
+
+/ .site-wrapper
+/ 	.site-wrapper-inner
+/ 		.cover-container
+/ 			= render "shared/notice_and_alert"
+/ 			.masthead.clearfix
+/ 				.inner
+/ 					%h3.masthead-brand
+/ 						= "Bring Me That"
+/ 					%nav
+/ 						%ul.nav.masthead-nav
+/ 							%li.active
+/ 								%a{:href => "#"}Home
+/ 								/ Sign in for normal users link but signout for all user roles.
+/ 								- if flyer_signed_in?
+/ 									= link_to "Logout", destroy_flyer_session_path
+/ 								- elsif user_signed_in?
+/ 									= link_to "Logout", destroy_user_session_path
+/ 								- else
+/ 									= link_to "Login", new_user_session_path
 
 .container-fluid
 	.row-fluid
