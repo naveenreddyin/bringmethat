@@ -20,13 +20,14 @@
 
 
 .navbar-inverse{
-	background-color: #8FD8D2;
+	background-color: #222f2c;
 	border-color: #fff;
 
 }
 
 body{
 	background-color: #efefef;
+	padding-top: 50px;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -34,8 +35,32 @@ body{
     color: #ff383f;
 }
 
-a{
-	color: #76323F;
+.navbar-inverse .navbar-nav > .active > a {
+	
+	border-radius: 50px;
 }
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bolder;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+	background-color: #E14658;
+	color: #FFF;
+	border-radius: 50px;
+}
+
+.navbar-nav > li {
+	margin: 5px 10px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
 
 

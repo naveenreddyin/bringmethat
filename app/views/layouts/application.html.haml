@@ -17,6 +17,9 @@
 				%li
 					%a{:href => "#"}One Home
 
+.container
+	= yield
+
 / .site-wrapper
 / 	.site-wrapper-inner
 / 		.cover-container
@@ -37,12 +40,12 @@
 / 								- else
 / 									= link_to "Login", new_user_session_path
 
-.container-fluid
-	.row-fluid
-		.span5.frontpage-first-column
-			= yield
-		.span10.frontpage-second-column
-			%p
-				%h1	Want to be a flyer?
-			.btn.btn-primary
-				= link_to "Click Here", new_flyer_session_path
+/ .container-fluid
+/ 	.row-fluid
+/ 		.span5.frontpage-first-column
+/ 			= yield
+/ 		.span10.frontpage-second-column
+/ 			%p
+/ 				%h1	Want to be a flyer?
+/ 			.btn.btn-primary
+/ 				= link_to "Click Here", new_flyer_session_path
