@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'cities/:state/:country', to: 'country#cities'
 
-  get '/static' => 'home#static'
+  get '/static' => 'home#static', as: "static_page_of_home"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
