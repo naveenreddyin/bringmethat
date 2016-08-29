@@ -5,9 +5,13 @@
 				= simple_form_for :new_user_session_path, :url => :static_page_of_home, :method => "GET" do |f|
 					= f.error_notification
 					.inputs
-						= f.input :body
+						= f.input :from, :input_html => { :id => "frontpage-from-id" }
+						= f.input :from_hidden, :as => :hidden, :input_html => {:value => "city", :id => "from_hidden_id"}
+
+						= f.input :to, :input_html => {:id => "frontpage-to-id"}
+						= f.input :to_hidden, :as => :hidden, :input_html => {:value => "city", :id => "to_hidden_id"}
 					.actions
-						= f.button :submit
+						= f.button :submit, 'Search', :class => 'btn btn-primary'
 
 
 
