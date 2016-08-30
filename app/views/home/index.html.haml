@@ -2,7 +2,7 @@
 	.col-md-6
 		.panel.panel-primary
 			.panel-body
-				= simple_form_for :new_user_session_path, :url => :static_page_of_home, :method => "GET" do |f|
+				= simple_form_for :browse_index_path, :url => :browse_index, :method => "GET" do |f|
 					= f.error_notification
 					.inputs
 						= f.input :from, :input_html => { :id => "frontpage-from-id" }
@@ -18,4 +18,5 @@
 	.col-md-6
 		.panel.panel-primary
 			.panel-body
-				= "hello"
+				%p Want to take items from a place to another while travelling?
+				= link_to "Register as Flyer", :new_flyer_registration, :class => "btn btn-primary"

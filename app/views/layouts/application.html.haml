@@ -16,6 +16,13 @@
 					%a{:href => "#"}Home
 				%li
 					%a{:href => "#"}One Home
+				%li
+					- if flyer_signed_in?
+						= link_to "Logout", destroy_flyer_session_path
+					- elsif user_signed_in?
+						= link_to "Logout", destroy_user_session_path
+					- else
+						= link_to "Login", new_user_session_path
 
 .container.main-container
 	= yield
