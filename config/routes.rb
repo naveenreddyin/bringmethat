@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get '/static' => 'home#static', as: "static_page_of_home"
 
+  get '/browse' => 'browse#index', as: "browse_index"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
