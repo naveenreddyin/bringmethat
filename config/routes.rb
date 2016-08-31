@@ -1,19 +1,19 @@
 Rails.application.routes.draw do
 
-  devise_for :flyers
   devise_for :admins
   resources :currencies
   resources :broadcasts
 
   devise_for :users, controllers: {
         sessions: 'users/sessions',
-            registrations: 'flyers/registrations'
+            registrations: 'users/registrations'
 
       }
 
-  # devise_for :flyers, controllers: {
-  #   sessions: 'flyers/sessions',
-  # }
+  devise_for :flyers, controllers: {
+    sessions: 'flyers/sessions',
+    registrations: 'flyers/registrations'
+  }
 
   
   # The priority is based upon order of creation: first created -> highest priority.
